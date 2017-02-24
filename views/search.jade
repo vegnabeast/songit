@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    // Header
+    header.video
+      .overlay
+      .intro-content.wow.fadeIn
+        .row
+          .btn.btn-outline-light.pull-left(onclick="goHome()") Home
+          .col-lg-12.text-center
+            i.fa.fa-music.fa-4x
+            h2 Song It
+            small  By Tom Rowe & David Luke
+            hr.colored
+            h4
+              strong Here is your song!
+        .row.content-row
+          form
+            .row
+              .form-group.floating-label-form-group.controls
+                br
+                #nameEnter.btn.btn-outline-light(name='downloadButton', onclick="downloadSong(#{fileLocation})") Download Song!
+                br
+                //audio(controls='', autoplay='')
+                //  source(src= "#{fileLocation}", type='audio/wav')
+                br
+            br
+
+
+

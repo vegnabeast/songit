@@ -1,0 +1,48 @@
+extends layout
+
+block content
+
+    // Header
+    header.video
+      .overlay
+      #nameContent.intro-content.wow.fadeIn
+        .row
+          .col-lg-12.text-center
+            i.fa.fa-music.fa-4x
+            h2 Song It
+            small  By Tom Rowe & David Luke
+            hr.colored
+            h4
+              strong Enter a name and let the real fun begin.
+        .row.content-row
+          form
+            .row
+              .form-group.floating-label-form-group.controls
+                input#name.form-control(type='text', placeholder='Name')
+            br
+            .row
+              .form-group
+                #nameEnter.btn.btn-outline-light Lets GO!
+      #songContent.intro-content.wow.fadeIn(style='display:none')
+        .row
+          #backEnter.btn.btn-outline-light.pull-left Back
+          .col-lg-12.text-center
+            i.fa.fa-music.fa-4x
+            h2 Song It
+            small  By Tom Rowe & David Luke
+            hr.colored
+            h4
+              strong Now lets select a song!
+        .row.content-row
+          form
+            .row
+              .form-group
+                each index in songs
+                  .btn.btn-outline-light(onclick="songSelected('#{index}')") #{index}
+                  br
+                  br
+            br
+
+
+
+
